@@ -58,4 +58,4 @@ jobs:
             {{ '${{ env.RELEASE_BIN }}-${{ steps.get_version.outputs.VERSION }}-x86_64-linux-musl.tar.gz' }}
         env:
           GITHUB_TOKEN: {{ '${{ secrets.GITHUB_TOKEN }}' }}
-          GITHUB_REPOSITORY: rahulsinghai/{{project-name}}
+          GITHUB_REPOSITORY: rahulsinghai/rust-data-engineering

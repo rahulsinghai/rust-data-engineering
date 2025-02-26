@@ -65,14 +65,14 @@ jobs:
         with:
           delete_release: true
           tag_name: nightly
-          repo: rahulsinghai/{{project-name}}
+          repo: rahulsinghai/rust-data-engineering
         env:
           GITHUB_TOKEN: {{ '${{ secrets.GITHUB_TOKEN }}' }}
 
       - name: Create Nightly Release
         uses: softprops/action-gh-release@v1
         with:
-          name: {{project-name}} Nightly {{ '(${{ env.SHA }})' }}
+          name: rust-data-engineering Nightly {{ '(${{ env.SHA }})' }}
           tag_name: nightly
           prerelease: true
           body_path: nightly-CHANGELOG.md
@@ -80,5 +80,5 @@ jobs:
             {{ '${{ env.RELEASE_BIN }}-${{ env.SHA }}-x86_64-linux-musl.tar.gz' }}
         env:
           GITHUB_TOKEN: {{ '${{ secrets.GITHUB_TOKEN }}' }}
-          GITHUB_REPOSITORY: rahulsinghai/{{project-name}}
+          GITHUB_REPOSITORY: rahulsinghai/rust-data-engineering
           SHA: {{ '${{ steps.short-sha.outputs.sha }}' }}

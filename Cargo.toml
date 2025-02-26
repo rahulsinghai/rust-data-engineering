@@ -1,7 +1,7 @@
 [package]
-name = "{{project-name}}"
+name = "rust-data-engineering"
 version = "0.1.0"
-edition = "2025"
+# edition = "2025"
 authors = [
     "Rahul Singhai <singrahu@gmail.com>",
 ]
@@ -11,16 +11,16 @@ include = [
     "README.md"
 ]
 description = ""
-repository = "https://github.com/rahulsinghai/{{project-name}}"
-documentation = "https://docs.rs/{{project-name}}/"
+repository = "https://github.com/rahulsinghai/rust-data-engineering"
+documentation = "https://docs.rs/rust-data-engineering/"
 keywords = []
 categories = ["command-line-utilities"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 
 [badges]
-is-it-maintained-issue-resolution = { repository = "rahulsinghai/{{project-name}}" }
-is-it-maintained-open-issues = { repository = "rahulsinghai/{{project-name}}" }
+is-it-maintained-issue-resolution = { repository = "rahulsinghai/rust-data-engineering" }
+is-it-maintained-open-issues = { repository = "rahulsinghai/rust-data-engineering" }
 
 maintenance = {status = "actively-developed"}
 
