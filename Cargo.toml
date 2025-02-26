@@ -1,0 +1,50 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2025"
+authors = [
+    "Rahul Singhai <singrahu@gmail.com>",
+]
+include = [
+    "src/**/*",
+    "Cargo.toml",
+    "README.md"
+]
+description = ""
+repository = "https://github.com/rahulsinghai/{{project-name}}"
+documentation = "https://docs.rs/{{project-name}}/"
+keywords = []
+categories = ["command-line-utilities"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+
+[badges]
+is-it-maintained-issue-resolution = { repository = "rahulsinghai/{{project-name}}" }
+is-it-maintained-open-issues = { repository = "rahulsinghai/{{project-name}}" }
+
+maintenance = {status = "actively-developed"}
+
+[dependencies]
+anyhow = "1.0.96"
+clap = "4.5.31"
+thiserror = "2.0.11"
+
+[build-dependencies]
+clap = "4.5.31"
+
+[features]
+default     = ["std"]
+std         = [] # support for no_std in a backwards-compatible way
+debug       = [] # Enables debug messages
+doc         = [] # All the features which add to documentation
+
+[profile.test]
+opt-level = 1
+
+[profile.bench]
+lto = true
+codegen-units = 1
+
+[package.metadata.docs.rs]
+features = ["doc"]
+targets = ["x86_64-unknown-linux-gnu"]

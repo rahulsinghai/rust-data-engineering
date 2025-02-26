@@ -1,0 +1,6 @@
+[clog]
+repository = "https://github.com/rahulsinghai/{{project-name}}"
+subtitle = "{{project-name}} Release"
+
+[sections]
+Documentation = ["docs", "doc"]
