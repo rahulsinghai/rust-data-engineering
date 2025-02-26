@@ -6,7 +6,7 @@ Finally, it prints out the final fruit salad.
 
 This example shows how to use a LinkedList, but remember that LinkedList
 has a higher memory overhead and worse cache locality than Vec or VecDeque,
-so it's typically not the best choice unless you have a specific need for the properties 
+so it's typically not the best choice unless you have a specific need for the properties
 of a linked list. In Rust, it's usually better to use a Vec or VecDeque.
 
 A LinkedList is a doubly-linked list, which means that each element in the list
@@ -26,9 +26,9 @@ fn main() {
     fruit.push_back("Strawberry Tree Berry");
 
     /*
-    Please note that converting a LinkedList to a Vec and back to a LinkedList 
-    isn't a common operation in practice. I included 
-    it in this example to keep the code as similar as possible 
+    Please note that converting a LinkedList to a Vec and back to a LinkedList
+    isn't a common operation in practice. I included
+    it in this example to keep the code as similar as possible
     to the original VecDeque example.
      */
 

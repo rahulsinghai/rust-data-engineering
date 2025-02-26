@@ -69,11 +69,12 @@ fn main() {
     }
     //guess
     if args.guess {
-        let (depth, best_shift, decrypted, max_score) = decoder_ring::guess_shift(&args.message, 26);
+        let (depth, best_shift, decrypted, max_score) =
+            decoder_ring::guess_shift(&args.message, 26);
         println!(
             "Best shift: {} (out of {}), score: {}",
             best_shift, depth, max_score
         );
-        println!("Decrypted message: {}", decrypted);        
+        println!("Decrypted message: {}", decrypted);
     }
 }

@@ -1,7 +1,7 @@
+use fruit_salad_maker::create_fruit_salad;
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
-use fruit_salad_maker::create_fruit_salad;
 
 fn read_fruits_from_file(path: &Path) -> io::Result<Vec<String>> {
     let file = File::open(path)?;

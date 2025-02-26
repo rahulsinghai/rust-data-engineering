@@ -30,15 +30,7 @@ impl PartialOrd for Fruit {
 fn generate_fruit_salad() -> BinaryHeap<Fruit> {
     let mut rng = thread_rng();
     let fruits = vec![
-        "Apple",
-        "Orange",
-        "Pear",
-        "Peach",
-        "Banana",
-        "Fig",
-        "Fig",
-        "Fig",
-        "Fig",
+        "Apple", "Orange", "Pear", "Peach", "Banana", "Fig", "Fig", "Fig", "Fig",
     ];
     let mut fruit_salad = BinaryHeap::new();
 

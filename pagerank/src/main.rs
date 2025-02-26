@@ -10,7 +10,10 @@ struct PageRank {
 impl PageRank {
     // The new function creates a new instance of the PageRank struct.
     fn new(damping: f64, iterations: usize) -> Self {
-        Self { damping, iterations }
+        Self {
+            damping,
+            iterations,
+        }
     }
 
     // The rank function calculates and returns the PageRank for each node in the graph.
@@ -52,16 +55,16 @@ impl PageRank {
 }
 
 fn main() {
-    // The graph represents links between sports websites. Each index represents a website, 
+    // The graph represents links between sports websites. Each index represents a website,
     // and the values in the vectors are the indexes of the websites they link to.
     let graph = vec![
-        vec![1, 2],  // ESPN links to NFL, NBA
-        vec![0],     // NFL links to ESPN
-        vec![0, 3],  // NBA links to ESPN, UFC
-        vec![0],     // UFC links to ESPN
-        vec![0, 1],  // MLB links to ESPN, NFL
+        vec![1, 2], // ESPN links to NFL, NBA
+        vec![0],    // NFL links to ESPN
+        vec![0, 3], // NBA links to ESPN, UFC
+        vec![0],    // UFC links to ESPN
+        vec![0, 1], // MLB links to ESPN, NFL
     ];
-    
+
     // The names corresponding to the indexes of the websites.
     let names = vec!["ESPN", "NFL", "NBA", "UFC", "MLB"];
 
@@ -69,8 +72,8 @@ fn main() {
     let pagerank = PageRank::new(0.85, 100);
 
     // Calculates the PageRank values.
-    let ranks = pagerank.rank(&graph);  
-    
+    let ranks = pagerank.rank(&graph);
+
     // Prints the PageRank values.
     for (i, rank) in ranks.iter().enumerate() {
         println!("The PageRank of {} is {}", names[i], rank);
@@ -78,7 +81,7 @@ fn main() {
 
     // Explanation of how PageRank works.
     let explanation = "PageRank is a link analysis algorithm used by Google that uses the hyperlink structure of the web to determine a quality ranking for each web page. It works by counting the number and quality of links to a page to determine a rough estimate of how important the website is.";
-    
+
     // Prints the explanation wrapped at 78 characters per line.
     println!("{}", fill(explanation, 78));
 }

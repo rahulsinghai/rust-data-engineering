@@ -1,6 +1,6 @@
 /*
 
-// Mutex that protects the data vector, and then we spawn three threads 
+// Mutex that protects the data vector, and then we spawn three threads
 //that each acquire a lock on the mutex and modify an element of the vector.
 
 use std::sync::Mutex;

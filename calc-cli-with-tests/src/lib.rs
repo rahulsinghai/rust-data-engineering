@@ -39,7 +39,7 @@ pub fn get_fruits(count: u32) -> Vec<String> {
     fruits
 }
 
-/*Test 
+/*Test
 
 A test that checks if the get_fruits function returns the correct number of fruits
 */
