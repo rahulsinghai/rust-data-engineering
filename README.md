@@ -1,11 +1,11 @@
-[![Clippy](https://github.com/nogibjj/rust-data-engineering/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/rust-data-engineering/actions/workflows/lint.yml)
-[![Tests](https://github.com/nogibjj/rust-data-engineering/actions/workflows/tests.yml/badge.svg)](https://github.com/nogibjj/rust-data-engineering/actions/workflows/tests.yml)
+[![Clippy](https://github.com/rahulsinghai/rust-data-engineering/actions/workflows/lint.yml/badge.svg)](https://github.com/rahulsinghai/rust-data-engineering/actions/workflows/lint.yml)
+[![Tests](https://github.com/rahulsinghai/rust-data-engineering/actions/workflows/tests.yml/badge.svg)](https://github.com/rahulsinghai/rust-data-engineering/actions/workflows/tests.yml)
 
 
 # Rust Data Engineering
 
 Projects for Rust Data Engineering Coursera course.
-Website for projects here: [https://nogibjj.github.io/rust-data-engineering/](https://nogibjj.github.io/rust-data-engineering/)
+Website for projects here: [https://rahulsinghai.github.io/rust-data-engineering/](https://rahulsinghai.github.io/rust-data-engineering/)
 
 ## Environments
 
@@ -161,7 +161,7 @@ In this lab you will gain experience extending an existing Rust project by forki
 
 **Steps**
 
-1. Fork the repository at **https://github.com/nogibjj/rust-data-engineering**
+1. Fork the repository at **https://github.com/rahulsinghai/rust-data-engineering**
 
 2. Clone your forked repository 
 
@@ -232,5 +232,5 @@ all: format lint test run
 * [Rust Collections](https://doc.rust-lang.org/std/collections/index.html)
 * [GitHub Copilot CLI](https://www.npmjs.com/package/@githubnext/github-copilot-cli)
 * [Rust Fundamentals](https://github.com/alfredodeza/rust-fundamentals)
-* [Rust Tutorial](https://nogibjj.github.io/rust-tutorial/)
-* [Rust MLOps Template](https://github.com/nogibjj/mlops-template)
+* [Rust Tutorial](https://rahulsinghai.github.io/rust-tutorial/)
+* [Rust MLOps Template](https://github.com/rahulsinghai/mlops-template)
