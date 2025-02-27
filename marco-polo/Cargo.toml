@@ -1,0 +1,15 @@
+[package]
+name = "marco-polo"
+version = "0.1.0"
+edition = "2024"
+authors = [
+    "Rahul Singhai <singrahu@gmail.com>",
+]
+include = [
+    "src/**/*",
+    "Cargo.toml",
+    "README.md"
+]
+
+[dependencies]
+clap = {version = "4.5.28", features = ["derive"]}

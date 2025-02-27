@@ -13,7 +13,7 @@ install:
 	#sudo apt-get install -y nodejs
 	#npm install -g @githubnext/github-copilot-cli
 	
-	echo 'eval "$(github-copilot-cli alias -- "$0")"' >> ~/.bashrc
+	# echo 'eval "$(github-copilot-cli alias -- "$0")"' >> ~/.bashrc
 
 build:
 	mdbook build data-eng-rust-tutorial
