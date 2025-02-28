@@ -15,6 +15,11 @@ Website for projects here: [https://rahulsinghai.github.io/rust-data-engineering
 
 * Any suggestions or feedback?  Feel free file a ticket.
 
+## Local development setup
+
+- [Install the Rust toolchain](https://www.rust-lang.org/tools/install) with rustup.
+- Build the project with Cargo using cargo build
+
 ## Labs (in sequential Order)
 
 ### Week 1- Rust Data Structures: Collections
