@@ -17,8 +17,18 @@ Website for projects here: [https://rahulsinghai.github.io/rust-data-engineering
 
 ## Local development setup
 
-- [Install the Rust toolchain](https://www.rust-lang.org/tools/install) with rustup.
-- Build the project with Cargo using cargo build
+* Update `rust-toolchain.toml` file to specify specific rust toolchain version.
+* Alternatively, [Install the Rust toolchain](https://www.rust-lang.org/tools/install) with `rustup update`.
+  * Then, set default toolchain version to use using `rustup default stable-x86_64-apple-darwin`
+* Build the project with Cargo using `cargo build`
+
+You can also set the version of `cargo` and `rust` you're using by using the `rustup` cli.
+You can give it a specific version or specify a channel like **nightly** or **beta**.
+
+```shell
+rustup override set nightly
+rustup update
+```
 
 ## Labs (in sequential Order)
 

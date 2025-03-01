@@ -20,6 +20,9 @@ fn main() {
 
     // Scramble (shuffle) the fruit
     let mut rng = rng();
+
+    // Converts the `fruit` collection into a `Vec` by consuming the iterator. 
+    // This operation collects all items from the `fruit` iterator and stores them in a new `Vec` instance
     let mut fruit: Vec<_> = fruit.into_iter().collect();
     fruit.shuffle(&mut rng);
 
