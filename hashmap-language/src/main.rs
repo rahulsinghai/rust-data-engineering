@@ -22,15 +22,21 @@ fn init_languages() -> HashMap<String, i32> {
 
 fn calculate_weights(years_active: &mut HashMap<String, i32>) -> HashMap<String, i32> {
     // Subtract the creation year from 2024 to get the number of years active.
+    // values_mut() returns a mutable reference to the values in the HashMap.
+    // The * dereferences the value so we can modify it.
     for year in years_active.values_mut() {
         *year = 2024 - *year;
     }
 
+    // unwrap_or() returns the value if it exists, otherwise it returns 0.
     let min_year = *years_active.values().min().unwrap_or(&0);
     let max_year = *years_active.values().max().unwrap_or(&0);
 
     let mut weights = HashMap::new();
 
+    // years_active.iter() returns an iterator over the key-value pairs in the HashMap.
+    // The key is the language name and the value is the number of years active.
+    // &value is a reference to the value, which is the number of years active. value alone would move the value out of the HashMap.
     for (language, &year) in years_active.iter() {
         let normalized_year = (year - min_year) as f64 / (max_year - min_year) as f64;
         let weight = (normalized_year * 99.0) as i32 + 1; // weight between 1 and 100
@@ -45,7 +51,7 @@ fn main() {
     let weights = calculate_weights(&mut languages);
 
     println!("Language weighing from 1-100 by age (1 is newest and 100 is oldest):");
-    for (language, weight) in &weights {
+    for (language, weight) in weights {
         println!("{}: {}", language, weight);
     }
 }
