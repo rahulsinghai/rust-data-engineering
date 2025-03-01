@@ -9,7 +9,7 @@ of the queue.
 */
 
 use rand::seq::SliceRandom; // rand is a random number generation library in Rust
-use rand::thread_rng;
+use rand::rng;
 use std::collections::VecDeque;
 
 fn main() {
@@ -19,7 +19,7 @@ fn main() {
     fruit.push_back("Strawberry Tree Berry");
 
     // Scramble (shuffle) the fruit
-    let mut rng = thread_rng();
+    let mut rng = rng();
     let mut fruit: Vec<_> = fruit.into_iter().collect();
     fruit.shuffle(&mut rng);
 
