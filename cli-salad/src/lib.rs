@@ -1,5 +1,5 @@
+use rand::rng;
 use rand::seq::SliceRandom;
-use rand::thread_rng;
 
 pub fn create_fruit_salad(num_fruits: usize) -> Vec<String> {
     let fruits = vec![
@@ -15,9 +15,13 @@ pub fn create_fruit_salad(num_fruits: usize) -> Vec<String> {
         "Apple".to_string(),
     ];
 
-    let mut rng = thread_rng();
+    let mut rng = rng();
     let mut fruits = fruits;
     fruits.shuffle(&mut rng);
 
+    // `into_iter` takes ownership of `fruits` vector and returns an iterator
+    // `fruits` can no longer be used here because it has been consumed
+    // `take` takes the first `num_fruits` elements from the iterator
+    // `collect` collects the elements into a new vector, which is returned from the function
     fruits.into_iter().take(num_fruits).collect()
 }

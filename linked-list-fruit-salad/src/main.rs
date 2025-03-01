@@ -54,38 +54,4 @@ fn main() {
             println!("{}", item);
         }
     }
-
-    // Add an element to the middle of the list
-    let mut cursor = fruit.cursor_front_mut();
-    for _ in 0..(fruit.len() / 2) {
-        cursor.move_next();
-    }
-    cursor.insert_after("Mango");
-
-    // Print out the fruit salad after adding Mango
-    println!("Fruit Salad after adding Mango:");
-    for (i, item) in fruit.iter().enumerate() {
-        if i != fruit.len() - 1 {
-            print!("{}, ", item);
-        } else {
-            println!("{}", item);
-        }
-    }
-
-    // Remove the element from the middle of the list
-    cursor = fruit.cursor_front_mut();
-    for _ in 0..(fruit.len() / 2) {
-        cursor.move_next();
-    }
-    cursor.remove_current();
-
-    // Print out the fruit salad after removing Mango
-    println!("Fruit Salad after removing Mango:");
-    for (i, item) in fruit.iter().enumerate() {
-        if i != fruit.len() - 1 {
-            print!("{}, ", item);
-        } else {
-            println!("{}", item);
-        }
-    }
 }
