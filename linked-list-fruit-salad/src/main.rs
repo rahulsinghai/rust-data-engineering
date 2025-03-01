@@ -15,8 +15,8 @@ A great example of when to use a LinkedList is when you need to insert or remove
 from the middle of the list.
 */
 
-use rand::seq::SliceRandom; // rand is a random number generation library in Rust
-use rand::thread_rng;
+use rand::seq::SliceRandom; // for shuffle. rand is a random number generation library in Rust
+use rand::rng;
 use std::collections::LinkedList;
 
 fn main() {
@@ -33,20 +33,54 @@ fn main() {
      */
 
     // Scramble (shuffle) the fruit
-    let mut rng = thread_rng();
-    let mut fruit: Vec<_> = fruit.into_iter().collect();
+    let mut rng = rng();
+    let mut fruit: Vec<&str> = fruit.into_iter().collect();
     fruit.shuffle(&mut rng);
 
     // Convert it back to LinkedList
-    let mut fruit: LinkedList<_> = fruit.into_iter().collect();
+    let mut fruit: LinkedList<&str> = fruit.into_iter().collect();
 
     // Add fruits to the both ends of the list after shuffling
     fruit.push_front("Pomegranate");
     fruit.push_back("Fig");
     fruit.push_back("Cherry");
-
+    
     // Print out the fruit salad
     println!("Fruit Salad:");
+    for (i, item) in fruit.iter().enumerate() {
+        if i != fruit.len() - 1 {
+            print!("{}, ", item);
+        } else {
+            println!("{}", item);
+        }
+    }
+
+    // Add an element to the middle of the list
+    let mut cursor = fruit.cursor_front_mut();
+    for _ in 0..(fruit.len() / 2) {
+        cursor.move_next();
+    }
+    cursor.insert_after("Mango");
+
+    // Print out the fruit salad after adding Mango
+    println!("Fruit Salad after adding Mango:");
+    for (i, item) in fruit.iter().enumerate() {
+        if i != fruit.len() - 1 {
+            print!("{}, ", item);
+        } else {
+            println!("{}", item);
+        }
+    }
+
+    // Remove the element from the middle of the list
+    cursor = fruit.cursor_front_mut();
+    for _ in 0..(fruit.len() / 2) {
+        cursor.move_next();
+    }
+    cursor.remove_current();
+
+    // Print out the fruit salad after removing Mango
+    println!("Fruit Salad after removing Mango:");
     for (i, item) in fruit.iter().enumerate() {
         if i != fruit.len() - 1 {
             print!("{}, ", item);
